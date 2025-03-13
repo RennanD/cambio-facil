@@ -5,6 +5,7 @@ export default [
   {
     rules: {
       '@stylistic/max-len': 'off',
+      camelcase: 'off',
     },
   },
 ]
