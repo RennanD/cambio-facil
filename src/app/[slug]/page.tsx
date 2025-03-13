@@ -28,7 +28,9 @@ export const metadata: Metadata = {
   ],
 }
 
-export default async function Home({ params }: { params: { slug: string } }) {
+type PageProps = Promise<{ slug: string }>
+
+export default async function Home({ params }: { params: PageProps }) {
   const { slug } = await params
 
   return (
