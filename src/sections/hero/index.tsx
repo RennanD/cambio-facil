@@ -4,6 +4,7 @@ import { CurrencyForm } from './currency-form'
 export const revalidate = 60 * 60 * 24
 
 export type Result = {
+  time_last_update_utc: string;
   conversion_rates:
   {
     [key: string]: number
@@ -29,7 +30,6 @@ export async function HeroSection({ slug }: { slug: string }) {
 
         <Card>
           <CardContent className="p-10">
-
             <CurrencyForm data={data} slug={slug} />
           </CardContent>
         </Card>
