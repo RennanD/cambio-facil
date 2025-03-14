@@ -105,7 +105,7 @@ export function CurrencyForm({ data, slug }: { data: Result, slug: string }) {
       <div className="flex items-center gap-2">
         <strong className="text-muted-foreground font-medium">
           {currentCurrency?.symbol}1 {slug} = {currentConvertedCurrency?.symbol}{' '}
-          <span className="text-emerald-600">{String(convertedValue).replace('.', ',')}</span>{' '}
+          <span className="text-emerald-600">{String(data.conversion_rates[convertedCurrency]).replace('.', ',')}</span>{' '}
           {convertedCurrency}
         </strong>
 
