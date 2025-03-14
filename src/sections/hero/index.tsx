@@ -16,8 +16,8 @@ export async function HeroSection({ slug }: { slug: string }) {
   const data: Result = await response.json()
 
   return (
-    <section className="py-20">
-      <div className="w-full max-w-[78.5rem] mx-auto px-5 space-y-10">
+    <section className="py-20" id="hero">
+      <div className="w-full max-w-6xl mx-auto px-5 space-y-10">
         <div className="flex items-center flex-col gap-4 text-center">
           <h1 className="text-3xl font-medium lg:text-5xl">Câmbio Fácil</h1>
           <p className="text-muted-foreground max-w-[640px] lg:text-lg">

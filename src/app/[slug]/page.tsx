@@ -1,3 +1,4 @@
+import { Header } from '@/components/header'
 import { HeroSection } from '@/sections/hero'
 import { Metadata } from 'next'
 
@@ -35,6 +36,7 @@ export default async function Home({ params }: { params: PageProps }) {
 
   return (
     <>
+      <Header />
       <main>
         <HeroSection slug={slug} />
       </main>
