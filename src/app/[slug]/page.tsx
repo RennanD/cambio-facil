@@ -1,6 +1,6 @@
 import { Header } from '@/components/header'
 import { HeroSection } from '@/sections/hero'
-import { HistoricSection } from '@/sections/historic'
+// import { HistoricSection } from '@/sections/historic'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export default async function Home({ params }: { params: PageProps }) {
       <Header />
       <main>
         <HeroSection slug={slug} />
-        <HistoricSection />
+        {/* <HistoricSection /> */}
       </main>
     </>
   )

@@ -6,7 +6,7 @@ import { Button } from '../ui/button'
 
 export function Desktop() {
   return (
-    <div className="w-full flex justify-between items-center">
+    <div className="w-full hidden lg:flex justify-between items-center">
       <Link href="/" className="flex items-center gap-2">
         <Image src={appLogo} alt="" height={48} width={48} />
         <strong>Câmbio fácil</strong>
@@ -19,11 +19,11 @@ export function Desktop() {
           </a>
         </Button>
 
-        <Button asChild variant="ghost" size="sm">
+        {/* <Button asChild variant="ghost" size="sm">
           <a href="#history">
             Acompanhar histórico
           </a>
-        </Button>
+        </Button> */}
       </nav>
     </div>
   )

@@ -1,5 +1,7 @@
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { CurrencyForm } from './currency-form'
+import { Badge } from '@/components/ui/badge'
+import { Clock, Sparkle } from 'lucide-react'
 
 export const revalidate = 60 * 60 * 24
 
@@ -17,9 +19,28 @@ export async function HeroSection({ slug }: { slug: string }) {
 
   return (
     <section className="py-20" id="hero">
-      <div className="w-full max-w-6xl mx-auto px-5 space-y-10">
-        <div className="flex items-center flex-col gap-4 text-center">
-          <h1 className="text-3xl font-medium lg:text-5xl">Câmbio Fácil</h1>
+      <div className="w-full max-w-6xl mx-auto px-5 flex flex-col-reverse gap-10 lg:flex-row">
+        <Card className="flex-1">
+          <CardHeader className="flex items-center justify-between border-b border-gray-100">
+            <h2 className="text-2xl font-medium flex items-center gap-2">
+              <Sparkle className="size-5" />
+              Câmbio Fácil
+            </h2>
+
+            <Badge variant="outline">
+              <Clock />
+              Taxas ao vivo
+            </Badge>
+          </CardHeader>
+          <CardContent>
+            <CurrencyForm data={data} slug={slug} />
+          </CardContent>
+        </Card>
+
+        <div className="flex items-center flex-col gap-4 flex-1 text-center lg:text-start">
+          <h1 className="text-3xl font-medium lg:text-6xl">
+            Conversão de moeda rápida e confiável
+          </h1>
           <p className="text-muted-foreground max-w-[640px] lg:text-lg">
             Converta moedas online com o Câmbio Fácil!
             Veja taxas de câmbio em tempo real,
@@ -28,11 +49,6 @@ export async function HeroSection({ slug }: { slug: string }) {
           </p>
         </div>
 
-        <Card>
-          <CardContent className="p-10">
-            <CurrencyForm data={data} slug={slug} />
-          </CardContent>
-        </Card>
       </div>
     </section>
   )
