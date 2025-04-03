@@ -42,7 +42,7 @@ export async function HeroSection({ slug }: { slug: string }) {
             Conversão de moeda rápida e confiável
           </h1>
           <p className="text-muted-foreground max-w-[640px] lg:text-lg">
-            Converta moedas online com o Câmbio Fácil!
+            Converta moedas online como dólar, euro e etc com o Câmbio Fácil!
             Veja taxas de câmbio em tempo real,
             histórico de variação e faça cálculos rápidos.
             Simples, rápido e gratuito!
